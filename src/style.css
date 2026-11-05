@@ -1,0 +1,562 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   1. GLOBAL STYLES
+========================================= */
+
+:root {
+  font-family: Manrope, system-ui, sans-serif;
+  color: #f2f4f8;
+  background: #080d17;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 50% 35%,
+    #152239 0%,
+    #080d17 60%
+  );
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* =========================================
+   2. TOP NAVIGATION
+========================================= */
+
+.topbar {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px;
+  border-bottom: 1px solid #ffffff12;
+  background: #070b13cc;
+  position: relative;
+  z-index: 5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #8ca6c8;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #dbeafe;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.brand small {
+  display: block;
+  color: #71819a;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #9aa8bd;
+  font: 11px 'DM Mono', monospace;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  background: #66d6a5;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #66d6a577;
+}
+
+.signin {
+  margin-left: 14px;
+  background: #edf4ff;
+  color: #0b1423;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.signin:hover {
+  background: #cfe0fa;
+}
+
+/* =========================================
+   3. MAIN CONTENT
+========================================= */
+
+main {
+  max-width: 1600px;
+  margin: auto;
+  padding: 28px 34px 20px;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 2px;
+  color: #7e9abf;
+  margin: 0 0 12px;
+}
+
+.intro h1 {
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.intro h1 em {
+  font-style: normal;
+  color: #9db9e3;
+}
+
+.subhead {
+  color: #7d8ca4;
+  font-size: 12px;
+  margin: 13px 0 0;
+}
+
+/* =========================================
+   4. NET WORTH LEGEND
+========================================= */
+
+.legend {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  font: 10px 'DM Mono', monospace;
+  color: #a4b0c2;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.red {
+  background: #e66b75;
+}
+
+.orange {
+  background: #f2a65a;
+}
+
+.green {
+  background: #56c99b;
+}
+
+/* =========================================
+   5. LAYOUT TOOLBAR
+========================================= */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+
+.layout-buttons {
+  display: flex;
+  gap: 5px;
+  background: #0e1726;
+  border: 1px solid #ffffff12;
+  padding: 4px;
+  border-radius: 9px;
+}
+
+.layout {
+  border: 0;
+  background: transparent;
+  color: #8291a8;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.layout.active {
+  background: #24344b;
+  color: #f4f7fc;
+  box-shadow: inset 0 0 0 1px #52678355;
+}
+
+.toolbar-note {
+  color: #74839b;
+  font: 10px 'DM Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.key {
+  border: 1px solid #34445b;
+  border-radius: 4px;
+  padding: 4px 6px;
+  color: #aab8cd;
+  margin-left: 6px;
+}
+
+/* =========================================
+   6. 3D VISUALIZATION
+========================================= */
+
+.stage {
+  height: clamp(390px, 53vh, 650px);
+  position: relative;
+  margin-top: 12px;
+  border: 1px solid #ffffff12;
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    #14243a66,
+    transparent 68%
+  );
+}
+
+#scene-container {
+  position: absolute;
+  inset: 0;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #9cb0ca;
+  font: 12px 'DM Mono', monospace;
+  pointer-events: none;
+}
+
+.loading.hidden {
+  display: none;
+}
+
+.scene-hint {
+  position: absolute;
+  bottom: 13px;
+  left: 16px;
+  color: #6e809b;
+  font: 10px 'DM Mono', monospace;
+  pointer-events: none;
+}
+
+/* =========================================
+   7. PROFILE TILES
+========================================= */
+
+.tile {
+  width: 112px;
+  height: 146px;
+  background: #142033;
+  border: 1px solid #ffffff24;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px #0004;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9px 7px;
+  color: #eef4fc;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.tile:hover {
+  border-color: #d3e4ff;
+  box-shadow: 0 0 20px #8ab9ff44;
+}
+
+.tile-photo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #26364d;
+  border: 2px solid #ffffff24;
+}
+
+.tile-name {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 7px;
+}
+
+.tile-meta {
+  font: 8px 'DM Mono', monospace;
+  color: #9aabc2;
+  margin-top: 3px;
+}
+
+.tile-interest {
+  font-size: 8px;
+  color: #b6c5d9;
+  margin-top: 5px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tile-worth {
+  font: 9px 'DM Mono', monospace;
+  font-weight: 500;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.tile.red {
+  border-top: 3px solid #e66b75;
+}
+
+.tile.orange {
+  border-top: 3px solid #f2a65a;
+}
+
+.tile.green {
+  border-top: 3px solid #56c99b;
+}
+
+.tile.red .tile-worth {
+  color: #ff9ca4;
+}
+
+.tile.orange .tile-worth {
+  color: #ffc27f;
+}
+
+.tile.green .tile-worth {
+  color: #83e7bd;
+}
+
+/* =========================================
+   8. PROFILE DETAIL POPUP
+========================================= */
+
+.detail-panel {
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  top: 100px;
+  width: 280px;
+  padding: 18px;
+
+  background: #111c2b;
+  border: 1px solid #31445f;
+  border-radius: 12px;
+  box-shadow: 0 18px 60px #0008;
+
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.detail-panel.open {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#close-detail {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: 0;
+  background: none;
+  color: #9caec5;
+  font-size: 24px;
+}
+
+.detail-panel img {
+  width: 74px;
+  height: 74px;
+  border-radius: 9px;
+  object-fit: cover;
+  border: 1px solid #ffffff20;
+}
+
+.detail-panel h3 {
+  margin: 12px 0 4px;
+  font-size: 16px;
+}
+
+.detail-panel p {
+  color: #8ea0b8;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.detail-panel .worth {
+  font-size: 20px;
+  color: #dce9fa;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* =========================================
+   9. NOTIFICATION TOAST
+========================================= */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1b2a3f;
+  border: 1px solid #425775;
+  color: #dbeafe;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  display: none;
+  z-index: 10000;
+}
+
+/* =========================================
+   10. FOOTER STATISTICS
+========================================= */
+
+.footer-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-top: 1px solid #ffffff12;
+  margin-top: 17px;
+  padding-top: 16px;
+}
+
+.footer-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-stats small {
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+  color: #667892;
+}
+
+.footer-stats strong {
+  font-size: 17px;
+  font-weight: 600;
+  color: #dce5f2;
+}
+
+.footer-stats .data-source strong {
+  font: 11px 'DM Mono', monospace;
+  color: #91a5c2;
+}
+
+/* =========================================
+   11. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 760px) {
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .topbar-right #record-count {
+    display: none;
+  }
+
+  main {
+    padding: 22px 15px;
+  }
+
+  .intro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .legend {
+    gap: 10px;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .layout-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .layout {
+    padding: 9px 10px;
+  }
+
+  .stage {
+    height: 54vh;
+  }
+
+  .footer-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-panel {
+    left: 15px;
+    right: 15px;
+    top: auto;
+    bottom: 15px;
+    width: auto;
+  }
+}

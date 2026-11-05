@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore profile data in an interactive 3D visualization." />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <title>Wealth Atlas | 3D Data Explorer</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">W</span><div><strong>WEALTH ATLAS</strong><small>3D DATA EXPLORER</small></div></div>
+        <div class="topbar-right"><span class="live-dot"></span><span id="record-count">Loading records…</span><button id="signin-button" class="signin">Sign in with Google</button></div>
+      </header>
+      <main>
+        <section class="intro"><div><p class="eyebrow">INTERACTIVE DATA VISUALIZATION</p><h1>Explore the <em>people</em><br/>behind the numbers.</h1><p class="subhead">200 profiles · Net worth distribution · Spatial exploration</p></div><div class="legend"><span><i class="red"></i> &lt; $100K</span><span><i class="orange"></i> $100K–$200K</span><span><i class="green"></i> &gt; $200K</span></div></section>
+        <section class="toolbar"><div class="layout-buttons" role="group" aria-label="Choose layout"><button class="layout active" data-layout="table">Table</button><button class="layout" data-layout="sphere">Sphere</button><button class="layout" data-layout="helix">Double Helix</button><button class="layout" data-layout="grid">Grid</button></div><div class="toolbar-note"><span class="key">DRAG</span> Rotate <span class="key">SCROLL</span> Zoom</div></section>
+        <section class="stage"><div id="scene-container"></div><div class="loading" id="loading">Loading profiles…</div><div class="scene-hint">Drag to rotate · Scroll to zoom · Click a profile to inspect</div></section>
+        <section class="footer-stats"><div><small>PROFILES</small><strong id="stat-total">—</strong></div><div><small>AVERAGE NET WORTH</small><strong id="stat-average">—</strong></div><div><small>TOP NET WORTH</small><strong id="stat-top">—</strong></div><div class="data-source"><small>DATA SOURCE</small><strong id="source-label">Local CSV · sign in to sync</strong></div></section>
+      </main>
+      <aside class="detail-panel" id="detail-panel" aria-live="polite"><button id="close-detail" aria-label="Close details">×</button><div id="detail-content"></div></aside>
+      <div class="toast" id="toast"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
